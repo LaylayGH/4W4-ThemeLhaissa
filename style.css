@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/*
+Theme Name: Theme Lhaissa
+Author: Lhaissa Jérôme
+Author URI: https://wordpress.org/
+Description: Thème de base développé dans le cours 4W4
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme-Lhaissa
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+:root {
+  --couleur-principal-entete: #ffd900;
+  --couleur-principal-accueil: #d30a6c;
+  --couleur-principal-evenement: #d70;
+  --couleur-principal-galerie: #d40;
+  --couleur-principal-footer: #a30;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.global {
+  min-height: 100vh;
+}
+
+.global > section,
+.global > header,
+.global > footer {
+  flex: 0 1 900px;
+  border: 1px solid #d40;
+}
+
+#entete {
+  background-color: var(--couleur-principal-entete);
+}
+
+#accueil {
+  background-color: var(--couleur-principal-accueil);
+}
+
+#evenement {
+  background-color: var(--couleur-principal-evenement);
+}
+
+#galerie {
+  background-color: var(--couleur-principal-galerie);
+}
+
+#footer {
+  background-color: var(--couleur-principal-footer);
+}
+
+h1 {
+  font-size: clamp(1rem, -1.292rem + 7.333w, 3.75rem);
+  font-weight: 600;
+  font-style: normal;
+}
+
+body {
+  font-family: "prompt";
+}/*# sourceMappingURL=style.css.map */
