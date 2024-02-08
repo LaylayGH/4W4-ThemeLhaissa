@@ -16,60 +16,90 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 :root {
-  --couleur-principal-entete: #ffd900;
-  --couleur-principal-accueil: #d30a6c;
-  --couleur-principal-evenement: #d70;
-  --couleur-principal-galerie: #d40;
-  --couleur-principal-footer: #a30;
+	--couleur-principal-entete: #ffb140;
+	--couleur-principal-accueil: #dd4b1a;
+	--couleur-principal-evenement: #92bda3;
+	--couleur-principal-galerie: #d2d2d2;
+	--couleur-principal-footer: #89608e;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	/*Ajouts*/
+	text-align: center;
 }
 
 .global {
-  min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 50vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 900px;
-  border: 1px solid #d40;
+	flex: 0 1 700px;
+	padding: 3rem 1rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	/*Ajouts*/
+	border-radius: 10rem;
+	font-size: clamp(1rem, 0.327rem + 2.692vw, 2.75rem);
+}
+
+#entete,
+#footer {
+	min-height: 30vh;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 #entete {
-  background-color: var(--couleur-principal-entete);
+	background-color: var(--couleur-principal-entete);
 }
 
 #accueil {
-  background-color: var(--couleur-principal-accueil);
+	background-color: var(--couleur-principal-accueil);
 }
 
 #evenement {
-  background-color: var(--couleur-principal-evenement);
+	background-color: var(--couleur-principal-evenement);
 }
 
 #galerie {
-  background-color: var(--couleur-principal-galerie);
+	background-color: var(--couleur-principal-galerie);
 }
 
 #footer {
-  background-color: var(--couleur-principal-footer);
+	background-color: var(--couleur-principal-footer);
 }
 
 h1 {
-  font-size: clamp(1rem, -1.292rem + 7.333w, 3.75rem);
-  font-weight: 600;
-  font-style: normal;
+	font-size: clamp(5rem, -1.292rem + 7.333w, 3.75rem);
+	font-weight: 600;
+	font-style: normal;
+}
+
+#footer h2,
+#entete h1 {
+	color: var(--couleur-principal-footer);
+}
+
+#evenement h2 {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+#galerie h2,
+#accueil h2 {
+	color: rgba(255, 255, 255, 0.5);
 }
 
 body {
-  font-family: "prompt";
-}/*# sourceMappingURL=style.css.map */
+	font-family: "prompt";
+	color: #fff;
+} /*# sourceMappingURL=style.css.map */
