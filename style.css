@@ -16,90 +16,101 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 :root {
-	--couleur-principal-entete: #ffb140;
-	--couleur-principal-accueil: #dd4b1a;
-	--couleur-principal-evenement: #92bda3;
-	--couleur-principal-galerie: #d2d2d2;
-	--couleur-principal-footer: #89608e;
+  /* Calcul des teintes */
+  --u1: 180; /* Couleur initiale */
+  --u2: calc(var(--u1) + 180); /* Couleur complémentaire*/
+  --u3: calc(var(--u2) - 30); /* Couleur analogue gauche*/
+  --u4: calc(var(--u2) + 30); /* Couleur analogue droite*/
+  /* Saturation */
+  --s-arriere: 100%
+  --s-avant : 90%;
+  /* Luminosité */
+  --l-arriere: 30%;
+  --l-avant: 42%;
+  /* Couleurs arrières */
+  --couleur-arriere-entete: hsl(var(--u1),var(--s-arriere),var(--l-arriere));
+  --couleur-arriere-accueil: hsl(var(--u2),var(--s-arriere),var(--l-arriere));
+  --couleur-arriere-evenement: hsl(var(--u3),var(--s-arriere),var(--l-arriere));
+  --couleur-arriere-galerie: hsl(var(--u4),var(--s-arriere),var(--l-arriere));
+  --couleur-arriere-footer: hsl(var(--u1),var(--s-arriere),var(--l-arriere));
+  /* Couleur avant */
+  --couleur-avant-entete: hsl(var(--u1),var(--s-avant),var(--l-avant));
+  --couleur-avant-accueil: hsl(var(--u2),var(--s-avant),var(--l-avant));
+  --couleur-avant-evenement: hsl(var(--u3),var(--s-avant),var(--l-avant));
+  --couleur-avant-galerie: hsl(var(--u4),var(--s-avant),var(--l-avant));
+  --couleur-avant-footer: hsl(var(--u1),var(--s-avant),var(--l-avant));
 }
 
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	/*Ajouts*/
-	text-align: center;
+  display: flex;
+  flex-direction: column;
+  /*Ajouts*/
+  text-align: center;
 }
 
 .global {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-	flex: 0 1 700px;
-	padding: 3rem 1rem;
-	background-color: rgba(255, 255, 255, 0.1);
-	/*Ajouts*/
-	border-radius: 10rem;
-	font-size: clamp(1rem, 0.327rem + 2.692vw, 2.75rem);
+  flex: 0 1 700px;
+  padding: 3rem 1rem;
+  /*Ajouts*/
+  border-radius: 10rem;
+  font-size: clamp(1rem, 0.327rem + 2.692vw, 2.75rem);
 }
 
 #entete,
 #footer {
-	min-height: 30vh;
-	background-color: rgba(0, 0, 0, 0.5);
+  min-height: 30vh;
 }
 
 #entete {
-	background-color: var(--couleur-principal-entete);
+  color: var(--couleur-avant-entete);
+  background-color: var(--couleur-arriere-entete);
+  position: relative;
 }
 
 #accueil {
-	background-color: var(--couleur-principal-accueil);
+  color: var(--couleur-avant-accueil);
+  background-color: var(--couleur-arriere-accueil);
 }
 
 #evenement {
-	background-color: var(--couleur-principal-evenement);
+  color: var(--couleur-avant-evenement);
+  background-color: var(--couleur-arriere-evenement);
 }
 
 #galerie {
-	background-color: var(--couleur-principal-galerie);
+  color: var(--couleur-avant-galerie);
+  background-color: var(--couleur-arriere-galerie);
 }
 
 #footer {
-	background-color: var(--couleur-principal-footer);
+  color: var(--couleur-avant-footer);
+  background-color: var(--couleur-arriere-footer);
 }
 
 h1 {
-	font-size: clamp(5rem, -1.292rem + 7.333w, 3.75rem);
-	font-weight: 600;
-	font-style: normal;
-}
-
-#footer h2,
-#entete h1 {
-	color: var(--couleur-principal-footer);
+  font-size: clamp(5rem, -1.292rem + 7.333vw, 3.75rem);
+  font-weight: 600;
+  font-style: normal;
 }
 
 #evenement h2 {
-	color: rgba(0, 0, 0, 0.5);
-}
-
-#galerie h2,
-#accueil h2 {
-	color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 body {
-	font-family: "Pacifico", cursive;
-	color: #fff;
-} /*# sourceMappingURL=style.css.map */
+  font-family: "Zilla Slab Highlight", sans-serif;
+}

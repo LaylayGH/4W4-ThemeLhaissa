@@ -6,8 +6,6 @@
 
 ## Ce qu'on doit faire
 
-### Utilisation de la fonction HSL()
-
-### Intégrer les vagues
-
-### Intégrer une diagonal
+- Utilisation de la fonction HSL()
+- Intégrer les vagues
+- Intégrer une diagonal
