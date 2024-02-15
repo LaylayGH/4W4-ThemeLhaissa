@@ -17,31 +17,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 :root {
   /* Calcul des teintes) */
-  --u1: 180;
-  --u2: calc(var(--u1) + 180);
-  --u3: calc(var(--u2) - 30);
+  --u1: 190;
+  --u2: calc(var(--u1) + 41);
+  --u3: calc(var(--u2) + 21);
   --u4: calc(var(--u2) + 30);
-  /* La saturation  et luminosité */
-  --s-arriere: 100%;
-  --s-avant: 90%;
-  --l-arriere: 30%;
-  --l-avant: 42%;
   /* couleur arrière plan - background-color */
-  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-accueil: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-evenement: hsl(
-  	var(--u3),
-  	var(--s-arriere),
-  	var(--l-arriere)
-  );
-  --couleur-arriere-galerie: hsl(var(--u4), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-footer: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-entete: hsl(149, 56%, 53%);
+  --couleur-arriere-accueil: hsl(250, 31%, 50%);
+  --couleur-arriere-evenement: hsl(231, 100%, 81%);
+  --couleur-arriere-galerie: hsl(190, 96%, 73%);
+  --couleur-arriere-footer: hsl(191, 65%, 57%);
   /* couleur avant plan  - color  */
-  --couleur-entete: hsl(var(--u1), var(--s-avant), var(--l-avant));
-  --couleur-accueil: hsl(var(--u2), var(--s-avant), var(--l-avant));
-  --couleur-evenement: hsl(var(--u3), var(--s-avant), var(--l-avant));
-  --couleur-galerie: hsl(var(--u4), var(--s-avant), var(--l-avant));
-  --couleur-footer: hsl(var(--u1), var(--s-avant), var(--l-avant));
+  --couleur-entete: hsl(var(--u1), 100%, 81%);
+  --couleur-accueil: hsl(var(--u2), 100%, 81%);
+  --couleur-evenement: hsl(var(--u2), 100%, 81%);
+  --couleur-galerie: hsl(var(--u3), 100%, 81%);
+  --couleur-footer: hsl(var(--u1), 100%, 81%);
 }
 
 * {
@@ -66,9 +57,10 @@ body {
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 700px;
+  flex: 0 1 50rem;
   padding: 3rem 1rem;
   /*Ajouts*/
+  z-index: 3;
   border-radius: 10rem;
   font-size: clamp(1rem, 0.327rem + 2.692vw, 2.75rem);
 }
@@ -76,39 +68,109 @@ body {
 #entete {
   background-color: var(--couleur-arriere-entete);
   position: relative;
-  color: var(--couleur-entete);
 }
 
 #accueil {
   background-color: var(--couleur-arriere-accueil);
-  color: var(--couleur-accueil);
+  position: relative;
+}
+
+#accueil blockquote {
+  font-size: smaller;
+  color: var(--couleur-galerie);
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
-  color: var(--couleur-evenement);
+  position: relative;
+}
+
+#evenement input[type=button] {
+  width: 10rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  color: var(--couleur-arriere-evenement);
 }
 
 #galerie {
-  background-color: var(--couleur-arriere-galerie);
-  color: var(--couleur-galerie);
+  background-color: var(--couleur-arriere-footer);
+  position: relative;
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
-  color: var(--couleur-footer);
 }
 
 h1 {
   font-size: clamp(5rem, -1.292rem + 7.333w, 3.75rem);
   font-weight: 600;
   font-style: normal;
+  color: var(--couleur-entete);
+  text-shadow: var(--couleur-entete) 1px 2px 25px;
+}
+
+#entete h3,
+#entete h6 {
+  color: var(--couleur-entete);
+}
+
+#accueil h2 {
+  color: var(--couleur-galerie);
 }
 
 #evenement h2 {
   color: rgba(0, 0, 0, 0.5);
 }
 
+#galerie h3,
+#galerie h6 {
+  transform: rotate(-5deg);
+  color: var(--couleur-arriere-footer);
+}
+
+#footer h2,
+#footer h6 {
+  color: var(--couleur-arriere-galerie);
+}
+
 body {
   font-family: "Zilla Slab Highlight", sans-serif;
+}
+
+.vague {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 116px;
+}
+
+.vague .shape-fill {
+  fill: var(--couleur-arriere-entete);
+}
+
+.diagonal {
+  position: relative;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  left: 0;
+  top: -70px;
+  bottom: 0;
+  background-color: var(--couleur-arriere-galerie);
+  z-index: 2;
+  transform: skewY(-5deg);
+  border: double var(--couleur-footer) 3rem;
 }/*# sourceMappingURL=style.css.map */
