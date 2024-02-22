@@ -89,6 +89,15 @@ body {
   background-color: var(--couleur-arriere-footer);
 }
 
+#footer input {
+  width: 10rem;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", sans-serif;
+  color: var(--couleur-arriere-evenement);
+}
+
 #entete {
   background-color: var(--couleur-arriere-entete);
   position: relative;
@@ -102,17 +111,6 @@ body {
 
 #entete #TextesEntete {
   width: 60%;
-}
-
-#footer input {
-  height: 4rem;
-  width: 10rem;
-  padding: 1rem;
-  border: none;
-  border-radius: 5rem;
-  font-size: 1.5rem;
-  font-family: "Trebuchet MS", sans-serif;
-  color: var(--couleur-arriere-evenement);
 }
 
 #entete h2 {
