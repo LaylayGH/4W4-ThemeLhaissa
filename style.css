@@ -65,11 +65,6 @@ body {
   font-size: clamp(1rem, 0.327rem + 2.692vw, 2.75rem);
 }
 
-#entete {
-  background-color: var(--couleur-arriere-entete);
-  position: relative;
-}
-
 #accueil {
   background-color: var(--couleur-arriere-accueil);
   position: relative;
@@ -85,14 +80,6 @@ body {
   position: relative;
 }
 
-#evenement input[type=button] {
-  width: 10rem;
-  border: none;
-  border-radius: 1rem;
-  font-size: 2rem;
-  color: var(--couleur-arriere-evenement);
-}
-
 #galerie {
   background-color: var(--couleur-arriere-footer);
   position: relative;
@@ -102,7 +89,33 @@ body {
   background-color: var(--couleur-arriere-footer);
 }
 
-h1 {
+#entete {
+  background-color: var(--couleur-arriere-entete);
+  position: relative;
+}
+
+#entete header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+#entete #TextesEntete {
+  width: 60%;
+}
+
+#footer input {
+  height: 4rem;
+  width: 10rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-family: "Trebuchet MS", sans-serif;
+  color: var(--couleur-arriere-evenement);
+}
+
+#entete h2 {
   font-size: clamp(5rem, -1.292rem + 7.333w, 3.75rem);
   font-weight: 600;
   font-style: normal;
@@ -110,7 +123,7 @@ h1 {
   text-shadow: var(--couleur-entete) 1px 2px 25px;
 }
 
-#entete h3,
+#entete h4,
 #entete h6 {
   color: var(--couleur-entete);
 }
