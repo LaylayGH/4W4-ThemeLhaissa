@@ -17,22 +17,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 :root {
   /* Calcul des teintes) */
-  --u1: 190;
-  --u2: calc(var(--u1) + 41);
-  --u3: calc(var(--u2) + 21);
-  --u4: calc(var(--u2) + 30);
+  --u1: 180;
+  --u2: calc(var(--u1) + 40);
+  --u3: calc(var(--u2) + 20);
+  --u4: calc(var(--u2) + 180);
   /* couleur arrière plan - background-color */
-  --couleur-arriere-entete: hsl(149, 56%, 53%);
-  --couleur-arriere-accueil: hsl(250, 31%, 50%);
-  --couleur-arriere-evenement: hsl(231, 100%, 81%);
-  --couleur-arriere-galerie: hsl(190, 96%, 73%);
-  --couleur-arriere-footer: hsl(191, 65%, 57%);
+  --couleur-arriere-entete: hsl(var(--u1), 100%, 80%);
+  --couleur-arriere-accueil: hsl(var(--u1), 75%, 65%);
+  --couleur-arriere-evenement: hsl(var(--u4), 100%, 58%);
+  --couleur-arriere-galerie: hsl(var(--u2), 100%, 77%);
+  --couleur-arriere-footer: hsl(var(--u1), 100%, 80%);
   /* couleur avant plan  - color  */
-  --couleur-entete: hsl(var(--u1), 100%, 81%);
-  --couleur-accueil: hsl(var(--u2), 100%, 81%);
-  --couleur-evenement: hsl(var(--u2), 100%, 81%);
-  --couleur-galerie: hsl(var(--u3), 100%, 81%);
-  --couleur-footer: hsl(var(--u1), 100%, 81%);
+  --couleur-entete: hsl(var(--u4), 100%, 46%);
+  --couleur-accueil: hsl(var(--u1), 100%, 90%);
+  --couleur-evenement: hsl(var(--u1), 45%, 100%);
+  --couleur-galerie: hsl(var(--u3), 65%, 57%);
+  --couleur-footer: hsl(var(--u1), 40%, 49%);
 }
 
 * {
@@ -62,7 +62,13 @@ body {
   /*Ajouts*/
   z-index: 3;
   border-radius: 10rem;
-  font-size: clamp(1rem, 0.327rem + 2.692vw, 2.75rem);
+  font-size: clamp(0.7rem, 0.327rem + 2.692vw, 1.75rem);
+}
+
+a {
+  color: #552583;
+  font-weight: bolder;
+  padding: 1rem 0 1rem 0;
 }
 
 #accueil {
@@ -72,7 +78,7 @@ body {
 
 #accueil blockquote {
   font-size: smaller;
-  color: var(--couleur-galerie);
+  color: var(--couleur-accueil);
 }
 
 #evenement {
@@ -95,9 +101,15 @@ body {
   border-radius: 5rem;
   font-size: 1.5rem;
   font-family: "Trebuchet MS", sans-serif;
-  color: var(--couleur-arriere-evenement);
+  background-color: var(--couleur-entete);
+  color: var(--couleur-accueil);
 }
 
+@media only screen and (max-width: 900px) {
+  #entete header {
+    flex-direction: column;
+  }
+}
 #entete {
   background-color: var(--couleur-arriere-entete);
   position: relative;
@@ -114,7 +126,7 @@ body {
 }
 
 #entete h2 {
-  font-size: clamp(5rem, -1.292rem + 7.333w, 3.75rem);
+  font-size: clamp(5rem, -1.292rem + 6.333w, 2.75rem);
   font-weight: 600;
   font-style: normal;
   color: var(--couleur-entete);
@@ -127,11 +139,15 @@ body {
 }
 
 #accueil h2 {
-  color: var(--couleur-galerie);
+  color: var(--couleur-accueil);
 }
 
-#evenement h2 {
-  color: rgba(0, 0, 0, 0.5);
+#evenement h2,
+#evenement p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--couleur-evenement);
 }
 
 #galerie h3,
@@ -142,7 +158,7 @@ body {
 
 #footer h2,
 #footer h6 {
-  color: var(--couleur-arriere-galerie);
+  color: var(--couleur-footer);
 }
 
 body {
@@ -169,6 +185,27 @@ body {
   fill: var(--couleur-arriere-entete);
 }
 
+.vague2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.vague2 svg {
+  position: relative;
+  display: block;
+  width: calc(154% + 1.3px);
+  height: 91px;
+}
+
+.vague2 .shape-fill {
+  fill: var(--couleur-arriere-accueil);
+}
+
 .diagonal {
   position: relative;
 }
@@ -180,8 +217,8 @@ body {
   left: 0;
   top: -70px;
   bottom: 0;
-  background-color: var(--couleur-arriere-galerie);
+  background-color: var(--couleur-arriere-footer);
   z-index: 2;
   transform: skewY(-5deg);
-  border: double var(--couleur-footer) 3rem;
+  border: double var(--couleur-arriere-evenement) 3rem;
 }/*# sourceMappingURL=style.css.map */
