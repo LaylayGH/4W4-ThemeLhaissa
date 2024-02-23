@@ -55,6 +55,11 @@ body {
   min-height: 50vh;
 }
 
+.global::first-letter {
+  font-size: x-large;
+  color: #fff;
+}
+
 .global > section,
 .global > header,
 .global > footer {
@@ -75,6 +80,18 @@ a {
   width: 65%;
 }
 
+#footer a {
+  width: 30%;
+  color: var(--couleur-entete);
+}
+
+#footer a:hover,
+#footer a:active,
+#footer a:focus {
+  width: 30%;
+  color: var(--couleur-footer);
+}
+
 a:hover,
 a:visited,
 a:focus {
@@ -86,16 +103,20 @@ a:focus {
   position: relative;
 }
 
-#accueil blockquote {
+#accueil blockquote,
+#evenement blockquote {
+  margin: 1rem;
+  padding: 1rem;
   border-radius: 2rem;
   background-color: rgba(85, 37, 131, 0.1);
   font-size: smaller;
-  color: var(--couleur-accueil);
+  color: var(--couleur-evenement);
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
   position: relative;
+  padding: 5rem;
 }
 
 #galerie {
@@ -159,8 +180,7 @@ a:focus {
   color: var(--couleur-accueil);
 }
 
-#evenement h2,
-#evenement p {
+#evenement h2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,6 +191,7 @@ a:focus {
 #galerie h6 {
   transform: rotate(-5deg);
   color: var(--couleur-arriere-evenement);
+  margin: 1rem;
 }
 
 #footer h2,
