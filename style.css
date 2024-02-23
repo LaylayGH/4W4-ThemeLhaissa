@@ -21,7 +21,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --u2: calc(var(--u1) + 40);
   --u3: calc(var(--u2) + 20);
   --u4: calc(var(--u2) + 180);
-  --couleur-tertiaire: ;
+  --couleur-tertiaire: rgb(85, 37, 131);
   /* couleur arrière plan - background-color */
   --couleur-arriere-entete: hsl(var(--u1), 100%, 80%);
   --couleur-arriere-accueil: hsl(var(--u1), 75%, 65%);
@@ -67,7 +67,7 @@ body {
 }
 
 a {
-  color: rgb(85, 37, 131);
+  color: var(--couleur-tertiaire);
   font-weight: bolder;
   border-radius: 2rem;
   display: inline-block;
@@ -76,7 +76,8 @@ a {
 }
 
 a:hover,
-a:visited {
+a:visited,
+a:focus {
   color: var(--couleur-entete);
 }
 
@@ -86,6 +87,8 @@ a:visited {
 }
 
 #accueil blockquote {
+  border-radius: 2rem;
+  background-color: rgba(85, 37, 131, 0.1);
   font-size: smaller;
   color: var(--couleur-accueil);
 }
@@ -114,8 +117,9 @@ a:visited {
   color: var(--couleur-accueil);
 }
 
-#footer input:hover {
-  background: linear-gradient(0.25turn, var(--couleur-entete), #ebf8e1, #f69d3c);
+#footer input:hover,
+#footer input:active {
+  background: linear-gradient(0.25turn, var(--couleur-tertiaire), var(--couleur-entete));
 }
 
 @media only screen and (max-width: 900px) {
