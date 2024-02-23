@@ -55,11 +55,6 @@ body {
   font-family: "DM Serif Display", serif;
 }
 
-.global::first-letter {
-  font-size: x-large;
-  color: #fff;
-}
-
 .global > section,
 .global > header,
 .global > footer {
@@ -78,6 +73,10 @@ a {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.5);
   width: 65%;
+}
+
+body small {
+  color: var(--couleur-tertiaire);
 }
 
 #footer a {
@@ -115,9 +114,10 @@ a:focus {
 
 #accueil blockquote::first-letter,
 #evenement blockquote::first-letter {
+  font-weight: bolder;
   font-size: 2em;
-  border: var(--couleur-tertiaire) 2px solid;
   padding: 0 1% 0 1%;
+  margin-bottom: 0.5rem;
   color: var(--couleur-tertiaire);
 }
 
@@ -135,6 +135,7 @@ a:focus {
 @media only screen and (max-width: 900px) {
   #entete header {
     flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 #entete h2 {
