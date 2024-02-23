@@ -21,6 +21,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
   --u2: calc(var(--u1) + 40);
   --u3: calc(var(--u2) + 20);
   --u4: calc(var(--u2) + 180);
+  --couleur-tertiaire: ;
   /* couleur arrière plan - background-color */
   --couleur-arriere-entete: hsl(var(--u1), 100%, 80%);
   --couleur-arriere-accueil: hsl(var(--u1), 75%, 65%);
@@ -66,9 +67,17 @@ body {
 }
 
 a {
-  color: #552583;
+  color: rgb(85, 37, 131);
   font-weight: bolder;
-  padding: 1rem 0 1rem 0;
+  border-radius: 2rem;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 65%;
+}
+
+a:hover,
+a:visited {
+  color: var(--couleur-entete);
 }
 
 #accueil {
@@ -103,6 +112,10 @@ a {
   font-family: "Trebuchet MS", sans-serif;
   background-color: var(--couleur-entete);
   color: var(--couleur-accueil);
+}
+
+#footer input:hover {
+  background: linear-gradient(0.25turn, var(--couleur-entete), #ebf8e1, #f69d3c);
 }
 
 @media only screen and (max-width: 900px) {
@@ -153,7 +166,7 @@ a {
 #galerie h3,
 #galerie h6 {
   transform: rotate(-5deg);
-  color: var(--couleur-arriere-footer);
+  color: var(--couleur-arriere-evenement);
 }
 
 #footer h2,
@@ -215,7 +228,7 @@ body {
   content: "";
   right: 0;
   left: 0;
-  top: -70px;
+  top: -18%;
   bottom: 0;
   background-color: var(--couleur-arriere-footer);
   z-index: 2;
