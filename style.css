@@ -11,7 +11,7 @@ Tested up to: 5.4
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-Lhaissa
+Text Domain: theme-lhaissa
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
@@ -58,8 +58,8 @@ body {
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 50rem;
-  padding: 3rem 1rem;
+  flex: 0 1 70rem;
+  padding: 4rem 2rem;
   /*Ajouts*/
   z-index: 3;
   border-radius: 10rem;
@@ -124,7 +124,7 @@ a:focus {
 #evenement {
   background-color: var(--couleur-arriere-evenement);
   position: relative;
-  padding: 5rem;
+  padding: 4rem 0 4rem;
 }
 
 #galerie {
@@ -268,4 +268,18 @@ body {
 #footer input:hover,
 #footer input:active {
   background: linear-gradient(0.25turn, var(--couleur-tertiaire), var(--couleur-entete));
+}
+
+.cours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.carte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 0 1 20%;
+  border: 2px aqua solid;
 }/*# sourceMappingURL=style.css.map */

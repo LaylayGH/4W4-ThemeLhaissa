@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Thème du Lhaissa</title>
-		<link rel="stylesheet" href="normalize.css" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/normalize.css" />
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 	<body>
 		<div id="entete" class="global">
 			<header>
-				<img src="./images/lakers-logo.png" alt="Lakers" width="40%" height="20%" />
+				<img src="images/lakers-logo.png" alt="Lakers" width="40%" height="20%" />
 				<div id="TextesEntete">
 				<h2>Thème de Lhaissa</h2>
 				<h4>4W4 - Conception d'interfaces</h4>
@@ -37,11 +37,29 @@
 			</header>
 		<div id="accueil" class="global">
 			<section><h2>Accueil</h2>
-			<blockquote>Lorem ipsum dolor,sit amet consectetur adipisicing elit. <small>Magnam magni dignissimos recusandae sequi libero quasi quos.</small> Nam voluptatibus nisi debitis esse eligendi. Nostrum earum, perspiciatis cumque id commodi quod delectus?</blockquote>
+			<div class="cours">
+			<?php
+			/*if(have_posts()){
+			while (have_posts()) {
+					the_post();
+					the_title('<h3\>','<\h3>');
+					the_content();
+				}
+			} */
+
+			if(have_posts()):
+			while (have_posts()) :the_post()?>
+			<div class="carte">
+			  <h3><?php the_title(); ?></h3>
+			  <p><?php echo wp_trim_words(get_the_content(), 30) ?></p>
+			  <?php endwhile; ?>
+			  <?php endif; ?>
+			</div>
+			</div>
 			</section>
 		</div>
 		<div id="evenement" class="global">
-			<section><h2>Événement <img src="./images/nba-logo.png" alt="NBA" width="7%" height="5%" /></h2>
+			<section><h2>Événement <img src="images/nba-logo.png" alt="NBA" width="7%" height="5%" /></h2>
 			<blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <small>Magnam magni dignissimos recusandae sequi libero quasi quos.</small> Deserunt pariatur provident neque necessitatibus amet accusamus nemo explicabo et ut eius molestiae ipsam ex perferendis, vel, blanditiis tempora corporis, praesentium consectetur.</blockquote>
 			<div class="vague2">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

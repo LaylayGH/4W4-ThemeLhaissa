@@ -1,0 +1,13 @@
+.cours {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.carte {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 0 1 20%;
+	border: 2px aqua solid;
+}
