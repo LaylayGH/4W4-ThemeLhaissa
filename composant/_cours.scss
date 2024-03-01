@@ -1,13 +1,23 @@
 .cours {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: space-around;
+}
+
+.cours h5 {
+	color: var(--couleur-arriere-evenement);
+	transform: rotate(-5deg);
 }
 
 .carte {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	flex: 0 1 20%;
-	border: 2px aqua solid;
+	flex: 0 1 30%;
+}
+
+.carte p {
+	font-size: 0.5em;
+	transform: rotate(-5deg);
+	color: var(--couleur-tertiaire);
 }

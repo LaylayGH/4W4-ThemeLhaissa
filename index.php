@@ -37,26 +37,9 @@
 			</header>
 		<div id="accueil" class="global">
 			<section><h2>Accueil</h2>
-			<div class="cours">
-			<?php
-			/*if(have_posts()){
-			while (have_posts()) {
-					the_post();
-					the_title('<h3\>','<\h3>');
-					the_content();
-				}
-			} */
-
-			if(have_posts()):
-			while (have_posts()) :the_post()?>
-			<div class="carte">
-			  <h3><?php the_title(); ?></h3>
-			  <p><?php echo wp_trim_words(get_the_content(), 30) ?></p>
-			  <?php endwhile; ?>
-			  <?php endif; ?>
-			</div>
-			</div>
-			</section>
+				<h6><a href="https://www.nba.com/lakers/">Lien du site des Lakers ®️</a></h6>
+				<h6><a href="https://www.lebronjames.com/">Site de Lebron James, joueur des Lakers</a></h6>
+				<h6><a href="https://fr.wikipedia.org/wiki/Lakers_de_Los_Angeles">Wikipédia des Lakers, équipe de la NBA</a></h6></section>
 		</div>
 		<div id="evenement" class="global">
 			<section><h2>Événement <img src="images/nba-logo.png" alt="NBA" width="7%" height="5%" /></h2>
@@ -71,9 +54,27 @@
 		<div id="galerie" class="global diagonal">
 			<section>
 				<h3>Galerie</h3>
-				<h6><a href="https://www.nba.com/lakers/">Lien du site des Lakers ®️</a></h6>
-				<h6><a href="https://www.lebronjames.com/">Site de Lebron James, joueur des Lakers</a></h6>
-				<h6><a href="https://fr.wikipedia.org/wiki/Lakers_de_Los_Angeles">Wikipédia des Lakers, équipe de la NBA</a></h6>
+            <div class="cours">
+            <?php
+            /*
+                if (have_posts()){
+                    while(have_posts()){
+                        the_post();
+                        the_title('<h3>','</h3>');
+                        echo wp_trim_words(get_the_content(),30);
+
+                    }
+                }
+            */
+            if (have_posts()):
+                while(have_posts()): the_post(); ?>
+                <div class="carte">
+                    <h5><?php the_title(); ?></h5>
+                    <p><?php echo wp_trim_words(get_the_content(),20); ?> </p>
+                </div>
+               <?php endwhile; ?>
+            <?php endif; ?>
+            </div>
 			</section>
 		</div>
 		<div id="footer" class="global">
