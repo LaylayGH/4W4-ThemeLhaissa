@@ -1,19 +1,28 @@
 .cours {
+	padding: 3rem;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	gap: 2rem;
 }
 
 .cours h5 {
+	background-color: var(--couleur-tertiaire);
 	color: var(--couleur-arriere-evenement);
 	transform: rotate(-5deg);
+}
+.cours h6 {
+	transform: rotate(-5deg);
+	padding: 0.5rem;
+	color: var(--couleur-evenement);
+	background-color: var(--couleur-arriere-evenement);
 }
 
 .carte {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	flex: 0 1 30%;
+	justify-content: space-evenly;
+	flex: 0 1 20%;
 }
 
 .carte p {

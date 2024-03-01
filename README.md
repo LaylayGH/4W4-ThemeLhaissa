@@ -2,6 +2,8 @@
 
 # 4W4-ThemeLhaissa
 
+Auteure : Lhaïssa Jérôme
+
 Mon lien github : https://github.com/LaylayGH
 
 L'objectif du laboratoire 3 :
