@@ -12,6 +12,11 @@
 </head>
 
 <body>
+	<div id="menu">
+		<header class="menu_header">
+		<?php wp_nav_menu() ?>
+		</header>
+	</div>
 	<div id="entete" class="global">
 		<header>
 			<!-- <img src="images/lakers-logo.png" alt="Lakers" width="40%" height="20%" /> -->
