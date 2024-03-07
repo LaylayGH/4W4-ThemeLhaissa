@@ -262,8 +262,23 @@ body {
 /* =================================
    Composants
    =================================== */
+.menu-principal-container {
+  position: absolute;
+  z-index: 2;
+  transform: translateY(-100%);
+}
+@media screen and (min-width: 700px) {
+  .menu-principal-container {
+    position: static;
+    transform: translateY(50px);
+  }
+}
+
 #menu-principal {
+  z-index: 2;
+  gap: 1rem;
   list-style: none;
+  flex-direction: column;
   display: flex;
   background-color: var(--couleur-tertiaire);
   justify-content: space-around;
@@ -271,13 +286,26 @@ body {
   height: 5rem;
   font-family: "DM Serif Display", serif;
   /********* ANIMATIONS ***********/
-  transform: translateY(-6rem);
-  transition: transform 2s ease;
+}
+@media screen and (min-width: 700px) {
+  #menu-principal {
+    flex-direction: row;
+  }
 }
 
-#menu-principal input#check-burger:checked > #menu-principal {
-  display: block;
-  transform: translateY(0);
+#check-burger:checked ~ .menu-principal-container {
+  transform: translateY(50px);
+}
+@media screen and (min-width: 700px) {
+  #check-burger:checked ~ .menu-principal-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #check-burger:checked {
+    display: none;
+  }
 }
 
 .menu-item a {
