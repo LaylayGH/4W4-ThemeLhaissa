@@ -265,7 +265,7 @@ body {
 .menu-principal-container {
   position: absolute;
   z-index: 2;
-  transform: translateY(-100%);
+  transform: translateY(-31rem);
 }
 @media screen and (min-width: 700px) {
   .menu-principal-container {
@@ -275,17 +275,20 @@ body {
 }
 
 #menu-principal {
-  z-index: 2;
+  z-index: 7;
   gap: 1rem;
+  position: absolute;
   list-style: none;
   flex-direction: column;
   display: flex;
   background-color: var(--couleur-tertiaire);
   justify-content: space-around;
   align-items: center;
-  height: 5rem;
+  width: 17rem;
+  height: 100vh;
   font-family: "DM Serif Display", serif;
   /********* ANIMATIONS ***********/
+  transition: transform 2s ease;
 }
 @media screen and (min-width: 700px) {
   #menu-principal {
@@ -293,8 +296,12 @@ body {
   }
 }
 
+input[type=checkbox] {
+  display: none;
+}
+
 #check-burger:checked ~ .menu-principal-container {
-  transform: translateY(50px);
+  transform: translateY(-3rem);
 }
 @media screen and (min-width: 700px) {
   #check-burger:checked ~ .menu-principal-container {
