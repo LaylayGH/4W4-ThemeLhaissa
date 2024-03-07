@@ -24,6 +24,6 @@ L'objectif du laboratoire 4 :
 
 - Intégration de chacun des éléments précédents de façon structuré. (1 point)
 
-- Création d'une github-page à partir de index.htm
+- Création d'une github-page à partir de index.html
 - Production de 5 commits
 - Design général de la page (1 point)
