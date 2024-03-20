@@ -298,7 +298,7 @@ input[type=checkbox] {
 }
 
 .liensSections {
-  background-color: var(--couleur-arriere-evenement);
+  background-color: var(--couleur-arriere-accueil);
   display: flex;
   height: 2rem;
   font-size: 1.5em;
@@ -352,13 +352,21 @@ input[type=checkbox] {
 }
 
 .carte {
+  padding: 1rem;
+  box-shadow: 0 1rem 1.5rem 0 var(--couleur-footer);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  flex: 0 1 20%;
+  flex: 0 1 25%;
+  border-radius: 3rem;
+}
+
+.carte h5 {
+  color: var(--couleur-accueil);
 }
 
 .carte p {
+  text-align: justify;
   font-size: 0.5em;
   color: var(--couleur-tertiaire);
 }/*# sourceMappingURL=style.css.map */

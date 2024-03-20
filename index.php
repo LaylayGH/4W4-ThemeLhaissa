@@ -12,7 +12,7 @@
 				?>
 						<div class="carte">
 							<h5><?= $titre; ?></h5>
-							<p><?= get_the_content(); ?></p>
+							<p><?= wp_trim_words(get_the_content(),30); ?></p>
 						</div>
 					<?php endwhile; ?>
 				<?php endif; ?>
