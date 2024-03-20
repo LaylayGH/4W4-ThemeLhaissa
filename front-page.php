@@ -13,6 +13,7 @@
 						<div class="carte">
 							<h5><?= $titre; ?></h5>
 							<p><?= get_the_content(); ?></p>
+                     <p><?= the_category(); ?></p>
 						</div>
 					<?php endwhile; ?>
 				<?php endif; ?>

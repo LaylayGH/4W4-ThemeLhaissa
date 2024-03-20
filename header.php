@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +37,6 @@
 			<div id="TextesEntete">
             <h1><?php echo get_bloginfo("name") ?></h1>
             <h2><?php echo get_bloginfo("description") ?></h2>
-				<h6>Février 2024</h6>
 			</div>
 		</header>
 	</div>
