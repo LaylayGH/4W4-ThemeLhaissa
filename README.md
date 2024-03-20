@@ -1,29 +1,21 @@
-# Laboratoire 3
+# Club de voyage
 
-## 4W4-ThemeLhaissa
+## Voyage.inc
 
 Auteure : Lhaïssa Jérôme
 
-Mon lien github : https://github.com/LaylayGH
+Mon lien vers la page : À venir
 
-L'objectif du laboratoire 4 :
-
-- Créer une nouvelle branche « labo4 »
-- Ajouter un menu permettant d'accéder
-  à vos cinq cours préférés
-  à chacune des sections de la page
-
-- Le menu doit être formatter en utilisant
-  composant/\_menu.scss
-  Le menu doit être adaptatif et être amovible en version mobile.
-- Créer le template header.php qui contiendra la structure d'entête de la page qui sera reproduite
-  dans chacun des modules du thème
-- Créer un template-part qui permettra d'afficher les vagues.
-
-# Barème de correction
-
-- Intégration de chacun des éléments précédents de façon structuré. (1 point)
-
-- Création d'une github-page à partir de index.html
-- Production de 5 commits
-- Design général de la page (1 point)
+• Minimum de 20 commits étalés sur toute la durée du TP
+• Une branche tp1
+• Déploiement de votre site sur « WHC »
+• Un readme.md pour le thème: auteur, titre du projet, description et lien vers votre site sur l’hébergeur « WHC »
+• Développement du layout et du design du thème/site web
+• Une mise en page entièrement adaptative
+• Amélioration de l'affichage produit par les modèles:
+o front-page.php
+o single.php
+o category.php
+o search.php
+o header.php
+o footer.php

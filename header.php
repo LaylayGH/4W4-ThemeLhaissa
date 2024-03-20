@@ -31,12 +31,3 @@
 		</div>
 	</header>
 </div>
-	<div id="entete" class="global">
-		<header>
-			<img src="http://localhost/4w4-lhaissa/wp-content/uploads/2024/03/lakers-logo.png" alt="Lakers" width="40%" height="20%" />
-			<div id="TextesEntete">
-            <h1><?php echo get_bloginfo("name") ?></h1>
-            <h2><?php echo get_bloginfo("description") ?></h2>
-			</div>
-		</header>
-	</div>
