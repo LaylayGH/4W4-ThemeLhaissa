@@ -45,14 +45,14 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-family: "DM Serif Display", serif;
+  font-family: "Hammersmith One", sans-serif;
 }
 
 .global {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "DM Serif Display", serif;
+  font-family: "Hammersmith One", sans-serif;
 }
 
 .global > section,
@@ -61,7 +61,7 @@ body {
   flex: 0 1 70rem;
   padding: 4rem 2rem;
   /*Ajouts*/
-  z-index: 3;
+  z-index: 1;
   border-radius: 10rem;
   font-size: clamp(0.7rem, 0.327rem + 2.692vw, 1.75rem);
 }
@@ -267,12 +267,6 @@ body {
   z-index: 2;
   transform: translateY(-31rem);
 }
-@media screen and (min-width: 700px) {
-  .menu-principal-container {
-    position: static;
-    transform: translateY(50px);
-  }
-}
 
 #menu-principal {
   z-index: 7;
@@ -290,29 +284,9 @@ body {
   /********* ANIMATIONS ***********/
   transition: transform 2s ease;
 }
-@media screen and (min-width: 700px) {
-  #menu-principal {
-    flex-direction: row;
-  }
-}
 
 input[type=checkbox] {
   display: none;
-}
-
-#check-burger:checked ~ .menu-principal-container {
-  transform: translateY(-3rem);
-}
-@media screen and (min-width: 700px) {
-  #check-burger:checked ~ .menu-principal-container {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  #check-burger:checked {
-    display: none;
-  }
 }
 
 .menu-item a {
@@ -340,7 +314,24 @@ input[type=checkbox] {
   font-weight: bolder;
 }
 
-.cours {
+@media screen and (min-width: 700px) {
+  .menu-principal-container {
+    position: static;
+    transform: translateY(50px);
+  }
+  #menu-principal {
+    flex-direction: row;
+  }
+  #check-burger,
+  #check-burger:checked {
+    display: none;
+  }
+  #check-burger:checked ~ .menu-principal-container {
+    transform: translateY(-3rem);
+    display: none;
+  }
+}
+.voyages {
   padding: 3rem;
   display: flex;
   flex-wrap: wrap;
@@ -348,14 +339,7 @@ input[type=checkbox] {
   gap: 2rem;
 }
 
-.cours h5 {
-  background-color: var(--couleur-tertiaire);
-  color: var(--couleur-arriere-evenement);
-  transform: rotate(-5deg);
-}
-
-.cours h6 {
-  transform: rotate(-5deg);
+.voyages h6 {
   padding: 0.5rem;
   color: var(--couleur-evenement);
   background-color: var(--couleur-arriere-evenement);
@@ -370,6 +354,5 @@ input[type=checkbox] {
 
 .carte p {
   font-size: 0.5em;
-  transform: rotate(-5deg);
   color: var(--couleur-tertiaire);
 }/*# sourceMappingURL=style.css.map */

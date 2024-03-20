@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
@@ -34,8 +35,8 @@
 		<header>
 			<img src="http://localhost/4w4-lhaissa/wp-content/uploads/2024/03/lakers-logo.png" alt="Lakers" width="40%" height="20%" />
 			<div id="TextesEntete">
-				<h2>Thème de Lhaissa</h2>
-				<h4>4W4 - Conception d'interfaces</h4>
+            <h1><?php echo get_bloginfo("name") ?></h1>
+            <h2><?php echo get_bloginfo("description") ?></h2>
 				<h6>Février 2024</h6>
 			</div>
 		</header>
