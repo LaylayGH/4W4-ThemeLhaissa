@@ -2,7 +2,7 @@
 
 	<div id="accueil" class="global">
 		<section>
-			<h2>Accueil</h2>
+			<h2>Nos voyages de découverte</h2>
 						<div class="voyages">
 
 				<?php
@@ -13,6 +13,7 @@
 						<div class="carte">
 							<h5><?= $titre; ?></h5>
 							<p><?= wp_trim_words(get_the_content(),30); ?></p>
+							<p><?= the_category();  ?></p>
 						</div>
 					<?php endwhile; ?>
 				<?php endif; ?>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,9 +14,7 @@
 
 <body>
 <div class="EnteteMenu">
-	<header class="menuPrincipal">
-
-
+	<header class="menuPrincipal  clr-bleu-100 bck-orange-400">
 		<input type="checkbox" id="check-burger">
 		<label for="check-burger">
 			<svg width="34" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#552583"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
@@ -31,3 +28,13 @@
 		</div>
 	</header>
 </div>
+
+	<div id="entete" class="global">
+		<header>
+			<img src="http://localhost/4w4-lhaissa/wp-content/uploads/2024/03/club-de-voyage.png" width="25%" height="20%" />
+			<div id="TextesEntete">
+            <h1><?php echo get_bloginfo("name") ?> &copy;</h1>
+            <h3><?php echo get_bloginfo("description") ?></h3>
+			</div>
+		</header>
+	</div>

@@ -15,27 +15,6 @@ Text Domain: theme-lhaissa
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-:root {
-  /* Calcul des teintes) */
-  --u1: 180;
-  --u2: calc(var(--u1) + 40);
-  --u3: calc(var(--u2) + 20);
-  --u4: calc(var(--u2) + 180);
-  --couleur-tertiaire: rgb(85, 37, 131);
-  /* couleur arrière plan - background-color */
-  --couleur-arriere-entete: hsl(var(--u1), 100%, 80%);
-  --couleur-arriere-accueil: hsl(var(--u1), 75%, 65%);
-  --couleur-arriere-evenement: hsl(var(--u4), 100%, 58%);
-  --couleur-arriere-galerie: hsl(var(--u2), 100%, 77%);
-  --couleur-arriere-footer: hsl(var(--u1), 100%, 80%);
-  /* couleur avant plan  - color  */
-  --couleur-entete: hsl(var(--u4), 100%, 46%);
-  --couleur-accueil: hsl(var(--u1), 100%, 90%);
-  --couleur-evenement: hsl(var(--u1), 45%, 100%);
-  --couleur-galerie: hsl(var(--u3), 65%, 57%);
-  --couleur-footer: hsl(var(--u1), 40%, 49%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -46,6 +25,10 @@ body {
   flex-direction: column;
   text-align: center;
   font-family: "Hammersmith One", sans-serif;
+}
+
+ul {
+  list-style: none;
 }
 
 .global {
@@ -59,29 +42,11 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 70rem;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
   /*Ajouts*/
   z-index: 1;
   border-radius: 10rem;
   font-size: clamp(0.7rem, 0.327rem + 2.692vw, 1.75rem);
-}
-
-.global > section a,
-.global > footer a {
-  padding: 0.5rem;
-  margin: 0.5rem;
-  color: var(--couleur-tertiaire);
-  font-weight: bolder;
-  border-radius: 2rem;
-  display: inline-block;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 65%;
-}
-
-a:hover,
-a:visited,
-a:focus {
-  color: var(--couleur-entete);
 }
 
 body small {
@@ -147,7 +112,7 @@ body small {
 
 #entete header {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: center;
   align-items: center;
   padding: 3rem 0rem 0rem 0rem;
 }
@@ -202,16 +167,153 @@ body {
   background: linear-gradient(0.25turn, var(--couleur-tertiaire), var(--couleur-entete));
 }
 
-#footer a {
-  width: 30%;
-  color: var(--couleur-entete);
+:root {
+  /* Calcul des teintes) */
+  --u1: 180;
+  --u2: calc(var(--u1) + 40);
+  --u3: calc(var(--u2) + 20);
+  --u4: calc(var(--u2) + 180);
+  --couleur-tertiaire: rgb(85, 37, 131);
+  /* couleur arrière plan - background-color */
+  --couleur-arriere-entete: hsl(var(--u1), 100%, 80%);
+  --couleur-arriere-accueil: hsl(var(--u1), 75%, 65%);
+  --couleur-arriere-evenement: hsl(var(--u4), 100%, 58%);
+  --couleur-arriere-galerie: hsl(var(--u2), 100%, 77%);
+  --couleur-arriere-footer: hsl(var(--u1), 100%, 80%);
+  /* couleur avant plan  - color  */
+  --couleur-entete: hsl(var(--u4), 100%, 46%);
+  --couleur-accueil: hsl(var(--u1), 100%, 90%);
+  --couleur-evenement: hsl(var(--u1), 45%, 100%);
+  --couleur-galerie: hsl(var(--u3), 65%, 57%);
+  --couleur-footer: hsl(var(--u1), 40%, 49%);
 }
 
-#footer a:hover,
-#footer a:active,
-#footer a:focus {
-  width: 30%;
-  color: var(--couleur-footer);
+.clr-bleu-100 {
+  color: rgb(229, 228, 255);
+}
+
+.bck-bleu-100 {
+  background-color: rgb(229, 228, 255);
+}
+
+.clr-bleu-200 {
+  color: rgb(179, 176, 255);
+}
+
+.bck-bleu-200 {
+  background-color: rgb(179, 176, 255);
+}
+
+.clr-bleu-300 {
+  color: rgb(136, 131, 255);
+}
+
+.bck-bleu-300 {
+  background-color: rgb(136, 131, 255);
+}
+
+.clr-bleu-400 {
+  color: rgb(68, 61, 255);
+}
+
+.bck-bleu-400 {
+  background-color: rgb(68, 61, 255);
+}
+
+.clr-mauve-100 {
+  color: rgb(155, 122, 214);
+}
+
+.bck-mauve-100 {
+  background-color: rgb(155, 122, 214);
+}
+
+.clr-mauve-200 {
+  color: rgb(115, 68, 196);
+}
+
+.bck-mauve-200 {
+  background-color: rgb(115, 68, 196);
+}
+
+.clr-mauve-300 {
+  color: rgb(83, 28, 179);
+}
+
+.bck-mauve-300 {
+  background-color: rgb(83, 28, 179);
+}
+
+.clr-mauve-400 {
+  color: rgb(40, 6, 98);
+}
+
+.bck-mauve-400 {
+  background-color: rgb(40, 6, 98);
+}
+
+.clr-orange-100 {
+  color: rgb(255, 140, 85);
+}
+
+.bck-orange-100 {
+  background-color: rgb(255, 140, 85);
+}
+
+.clr-orange-200 {
+  color: rgb(255, 123, 59);
+}
+
+.bck-orange-200 {
+  background-color: rgb(255, 123, 59);
+}
+
+.clr-orange-300 {
+  color: rgb(251, 86, 7);
+}
+
+.bck-orange-300 {
+  background-color: rgb(251, 86, 7);
+}
+
+.clr-orange-400 {
+  color: rgb(133, 43, 0);
+}
+
+.bck-orange-400 {
+  background-color: rgb(133, 43, 0);
+}
+
+.clr-beige-100 {
+  color: rgb(255, 253, 239);
+}
+
+.bck-beige-100 {
+  background-color: rgb(255, 253, 239);
+}
+
+.clr-beige-200 {
+  color: rgb(255, 247, 192);
+}
+
+.bck-beige-200 {
+  background-color: rgb(255, 247, 192);
+}
+
+.clr-beige-300 {
+  color: rgb(239, 235, 206);
+}
+
+.bck-beige-300 {
+  background-color: rgb(239, 235, 206);
+}
+
+.clr-beige-400 {
+  color: rgb(201, 189, 102);
+}
+
+.bck-beige-400 {
+  background-color: rgb(201, 189, 102);
 }
 
 /* =================================
@@ -254,7 +356,6 @@ body {
   top: -5rem;
   bottom: 0;
   background-color: var(--couleur-arriere-footer);
-  z-index: 2;
   transform: skewY(-5deg);
   border: double var(--couleur-arriere-evenement) 3rem;
 }
@@ -292,7 +393,6 @@ input[type=checkbox] {
 .menu-item a {
   color: var(--couleur-accueil);
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.2);
   padding: 1rem;
   border-radius: 2rem;
 }
@@ -321,6 +421,7 @@ input[type=checkbox] {
     width: 100%;
   }
   #menu-principal {
+    z-index: 5;
     flex-direction: row;
     width: 100%;
     position: fixed;
@@ -338,11 +439,11 @@ input[type=checkbox] {
   }
 }
 .voyages {
-  padding: 3rem;
+  padding: 2rem 0 0 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 2rem;
+  justify-content: space-evenly;
+  gap: 1.5rem;
 }
 
 .voyages h6 {
@@ -352,12 +453,12 @@ input[type=checkbox] {
 }
 
 .carte {
-  padding: 1rem;
+  padding: 1.5rem;
   box-shadow: 0 1rem 1.5rem 0 var(--couleur-footer);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  flex: 0 1 25%;
+  flex: 0 1 13rem;
   border-radius: 3rem;
 }
 
