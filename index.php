@@ -21,7 +21,7 @@
 		</section>
 		<?php get_template_part("gabarits/vague") ?>
 	</div>
-	<div id="evenement" class="global bck-beige-300">
+	<div id="evenement" class="global bck-beige-300 clr-bleu-300">
 		<section>
 			<h2>Événement </h2>
 			<blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <small>Magnam magni dignissimos recusandae sequi libero quasi quos.</small> Deserunt pariatur provident neque necessitatibus amet accusamus nemo explicabo et ut eius molestiae ipsam ex perferendis, vel, blanditiis tempora corporis, praesentium consectetur.</blockquote>

@@ -90,7 +90,6 @@ body small {
 #entete #TextesEntete h2 {
   font-weight: 600;
   font-style: normal;
-  text-shadow: var(--couleur-entete) 1px 2px 25px;
 }
 
 #entete {
@@ -414,33 +413,33 @@ body {
   bottom: 0;
   background-color: var(--clr-bleu-moyen);
   transform: skewY(-5deg);
-  border: groove var(--clr-bleu-leger) 2rem;
+  border: double var(--clr-bleu-leger) 2rem;
 }
 
 /* =================================
    Composants
    =================================== */
 .menu-principal-container {
-  position: absolute;
+  position: fixed;
   z-index: 2;
-  transform: translateY(0);
 }
 
 #menu-principal {
-  z-index: 7;
-  gap: 1rem;
-  position: absolute;
   list-style: none;
   flex-direction: column;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 17rem;
-  height: 70vh;
+  width: 11rem;
+  height: 94vh;
   font-family: "DM Serif Display", serif;
   background-color: var(--clr-bleu-moyen);
   /********* ANIMATIONS ***********/
-  transition: transform 2s ease;
+  transform: translateX(-20rem);
+}
+
+#check-burger:checked ~ .menu-principal-container {
+  transform: translateX(20rem);
 }
 
 .menu-item a {
@@ -480,6 +479,7 @@ body {
     height: 4rem;
     top: -3.5rem;
     bottom: 0;
+    transform: translateX(0);
   }
   #check-burger,
   #check-burger:checked {
@@ -510,20 +510,22 @@ body {
 
 .carte ul.post-categories::before {
   position: relative;
-  content: "----------------";
+  content: "--------------";
   width: 4rem;
 }
 
 .carte ul.post-categories {
-  font-size: 1rem;
+  list-style-type: none;
+  line-height: 1.3rem;
 }
 
-.carte h5 {
-  color: var(--couleur-accueil);
+.carte ul.post-categories li > a {
+  font-size: 1rem;
+  text-decoration: wavy;
+  color: var(--clr-orange-fonce);
 }
 
 .carte p {
   text-align: justify;
   font-size: 0.5em;
-  color: var(--couleur-tertiaire);
 }/*# sourceMappingURL=style.css.map */
