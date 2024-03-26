@@ -21,14 +21,14 @@
 		</section>
 		<?php get_template_part("gabarits/vague") ?>
 	</div>
-	<div id="evenement" class="global">
+	<div id="evenement" class="global bck-beige-300">
 		<section>
 			<h2>Événement </h2>
 			<blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <small>Magnam magni dignissimos recusandae sequi libero quasi quos.</small> Deserunt pariatur provident neque necessitatibus amet accusamus nemo explicabo et ut eius molestiae ipsam ex perferendis, vel, blanditiis tempora corporis, praesentium consectetur.</blockquote>
 		</section>
 			<?php get_template_part("gabarits/vague") ?>
 			</div>
-	<div id="galerie" class="global diagonal">
+	<div id="galerie" class="global diagonal bck-bleu-200 clr-mauve-300">
 		<section>
 			<h3>Galerie</h3>
 		</section>

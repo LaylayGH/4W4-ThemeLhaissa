@@ -27,10 +27,6 @@ body {
   font-family: "Hammersmith One", sans-serif;
 }
 
-ul {
-  list-style: none;
-}
-
 .global {
   display: flex;
   align-items: center;
@@ -50,7 +46,7 @@ ul {
 }
 
 body small {
-  color: var(--couleur-tertiaire);
+  color: var(--clr-bleu-fonce);
 }
 
 #accueil {
@@ -62,9 +58,10 @@ body small {
   margin: 1rem;
   padding: 1rem;
   border-radius: 2rem;
-  background-color: rgba(85, 37, 131, 0.1);
+  background-color: rgba(255, 140, 85, 0.1);
   font-size: smaller;
-  color: var(--couleur-evenement);
+  color: var(--clr-orange-leger);
+  box-shadow: 1rem 1rem 0.1rem var(--clr-orange-pale);
 }
 
 #evenement blockquote::first-letter {
@@ -72,17 +69,15 @@ body small {
   font-size: 2em;
   padding: 0 1% 0 1%;
   margin-bottom: 0.5rem;
-  color: var(--couleur-tertiaire);
+  color: var(--clr-mauve-fonce);
 }
 
 #evenement {
-  background-color: var(--couleur-arriere-evenement);
   position: relative;
   padding: 4rem 0 4rem;
 }
 
 #galerie {
-  background-color: var(--couleur-arriere-footer);
   position: relative;
 }
 
@@ -95,13 +90,7 @@ body small {
 #entete #TextesEntete h2 {
   font-weight: 600;
   font-style: normal;
-  color: var(--couleur-entete);
   text-shadow: var(--couleur-entete) 1px 2px 25px;
-}
-
-#entete h4,
-#entete h6 {
-  color: var(--couleur-entete);
 }
 
 #entete {
@@ -141,15 +130,6 @@ body {
   font-family: "Zilla Slab Highlight", sans-serif;
 }
 
-#footer h2,
-#footer h6 {
-  color: var(--couleur-tertiaire);
-}
-
-#footer {
-  background-color: var(--couleur-arriere-footer);
-}
-
 #footer input {
   width: 10rem;
   border: none;
@@ -158,11 +138,6 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   background-color: var(--couleur-tertiaire);
   color: var(--couleur-accueil);
-}
-
-#footer input:hover,
-#footer input:active {
-  background: linear-gradient(0.25turn, var(--couleur-tertiaire), var(--couleur-entete));
 }
 
 :root {
@@ -437,9 +412,9 @@ body {
   left: 0;
   top: -5rem;
   bottom: 0;
-  background-color: var(--couleur-arriere-footer);
+  background-color: var(--clr-bleu-moyen);
   transform: skewY(-5deg);
-  border: double var(--couleur-arriere-evenement) 3rem;
+  border: groove var(--clr-bleu-leger) 2rem;
 }
 
 /* =================================
@@ -458,22 +433,18 @@ body {
   list-style: none;
   flex-direction: column;
   display: flex;
-  background-color: var(--couleur-tertiaire);
   justify-content: space-around;
   align-items: center;
   width: 17rem;
-  height: 100vh;
+  height: 70vh;
   font-family: "DM Serif Display", serif;
+  background-color: var(--clr-bleu-moyen);
   /********* ANIMATIONS ***********/
   transition: transform 2s ease;
 }
 
-input[type=checkbox] {
-  display: none;
-}
-
 .menu-item a {
-  color: var(--couleur-accueil);
+  color: var(--clr-beige-moyen);
   text-decoration: none;
   padding: 1rem;
   border-radius: 2rem;
@@ -490,6 +461,7 @@ input[type=checkbox] {
 }
 
 .liensSections a {
+  color: var(--clr-beige-moyen);
   text-decoration: none;
   font-weight: bolder;
 }
@@ -526,20 +498,24 @@ input[type=checkbox] {
   gap: 1.5rem;
 }
 
-.voyages h6 {
-  padding: 0.5rem;
-  color: var(--couleur-evenement);
-  background-color: var(--couleur-arriere-evenement);
-}
-
 .carte {
   padding: 1.5rem;
-  box-shadow: 0 1rem 1.5rem 0 var(--couleur-footer);
+  box-shadow: 0 1rem 1.5rem 0 var(--clr-orange-fonce);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   flex: 0 1 13rem;
   border-radius: 3rem;
+}
+
+.carte ul.post-categories::before {
+  position: relative;
+  content: "----------------";
+  width: 4rem;
+}
+
+.carte ul.post-categories {
+  font-size: 1rem;
 }
 
 .carte h5 {

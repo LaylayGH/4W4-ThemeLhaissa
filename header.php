@@ -14,13 +14,13 @@
 
 <body>
 <div class="EnteteMenu">
-	<header class="menuPrincipal bck-orange-300">
+	<header class="menuPrincipal bck-bleu-300">
 		<input type="checkbox" id="check-burger">
 		<label for="check-burger">
 			<svg width="34" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" color="#552583"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
 		</label>
 		<?php wp_nav_menu(array("container" => "nav")); ?>
-		<div class="liensSections bck-orange-300 clr-beige-400">
+		<div class="liensSections bck-orange-200">
 			<a href="#accueil">Accueil</a>
 			<a href="#evenement">Évènement</a>
 			<a href="#galerie">Galerie</a>
