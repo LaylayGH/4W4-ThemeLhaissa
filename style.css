@@ -38,7 +38,7 @@ body {
 .global > header,
 .global > footer {
   flex: 0 1 70rem;
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
   /*Ajouts*/
   z-index: 1;
   border-radius: 10rem;
@@ -58,10 +58,10 @@ body small {
   margin: 1rem;
   padding: 1rem;
   border-radius: 2rem;
-  background-color: rgba(255, 140, 85, 0.1);
+  background-color: rgba(255, 140, 85, 0.2);
   font-size: smaller;
   color: var(--clr-orange-leger);
-  box-shadow: 1rem 1rem 0.1rem var(--clr-orange-pale);
+  box-shadow: 0.7rem 0.7rem 0.1rem var(--clr-orange-pale);
 }
 
 #evenement blockquote::first-letter {
@@ -69,7 +69,7 @@ body small {
   font-size: 2em;
   padding: 0 1% 0 1%;
   margin-bottom: 0.5rem;
-  color: var(--clr-mauve-fonce);
+  color: var(--clr-bleu-fonce);
 }
 
 #evenement {
@@ -100,7 +100,7 @@ body small {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0rem 0rem 0rem;
+  padding: 6rem 0rem 0rem 0rem;
 }
 
 #entete #TextesEntete {
@@ -430,12 +430,24 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 11rem;
-  height: 94vh;
+  width: 8rem;
+  height: 100vh;
   font-family: "DM Serif Display", serif;
   background-color: var(--clr-bleu-moyen);
   /********* ANIMATIONS ***********/
   transform: translateX(-20rem);
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.menuPrincipal label {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  color: var(--clr-beige-moyen);
 }
 
 #check-burger:checked ~ .menu-principal-container {
@@ -452,11 +464,11 @@ body {
 .liensSections {
   display: flex;
   height: 2rem;
-  font-size: 1.5em;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 2rem;
   padding: 1rem;
+  font-size: clamp(0.8rem, -0.071rem + 1.524vw, 2rem);
 }
 
 .liensSections a {
@@ -472,12 +484,12 @@ body {
     width: 100%;
   }
   #menu-principal {
-    z-index: 5;
+    z-index: 10;
     flex-direction: row;
     width: 100%;
     position: fixed;
     height: 4rem;
-    top: -3.5rem;
+    top: -1rem;
     bottom: 0;
     transform: translateX(0);
   }
@@ -488,6 +500,30 @@ body {
   #check-burger:checked ~ .menu-principal-container {
     transform: translateY(-3rem);
     display: none;
+  }
+  .liensSections {
+    z-index: 2;
+    position: absolute;
+    top: 10rem;
+    right: 0;
+    flex-direction: column;
+    height: 12rem;
+  }
+  .liensSections::before {
+    display: flex;
+    cursor: pointer;
+    content: "↓";
+    position: fixed;
+    top: 5rem;
+    right: 1rem;
+    color: var(--clr-beige-moyen);
+    background-color: var(--clr-orange-fonce);
+    border-radius: 5rem;
+    padding: 1rem;
+    width: 1rem;
+    height: 1rem;
+    align-items: center;
+    justify-content: center;
   }
 }
 .voyages {
@@ -506,6 +542,10 @@ body {
   justify-content: space-evenly;
   flex: 0 1 13rem;
   border-radius: 3rem;
+}
+
+.carte h5 {
+  padding-bottom: 0.5rem;
 }
 
 .carte ul.post-categories::before {
