@@ -1,8 +1,8 @@
 	<?php get_header(); ?>
 
-	<div id="accueil" class="global">
+	<div id="accueil" class="global  bck-orange-200 clr-beige-200">
 		<section>
-			<h2>Accueil</h2>
+			<h2>Nos voyages de découverte</h2>
 						<div class="voyages">
 
 				<?php
@@ -13,6 +13,7 @@
 						<div class="carte">
 							<h5><?= $titre; ?></h5>
 							<p><?= wp_trim_words(get_the_content(),30); ?></p>
+							<p><?= the_category();  ?></p>
 						</div>
 					<?php endwhile; ?>
 				<?php endif; ?>
@@ -26,7 +27,7 @@
 			<blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <small>Magnam magni dignissimos recusandae sequi libero quasi quos.</small> Deserunt pariatur provident neque necessitatibus amet accusamus nemo explicabo et ut eius molestiae ipsam ex perferendis, vel, blanditiis tempora corporis, praesentium consectetur.</blockquote>
 		</section>
 			<?php get_template_part("gabarits/vague") ?>
-	</div>
+			</div>
 	<div id="galerie" class="global diagonal">
 		<section>
 			<h3>Galerie</h3>

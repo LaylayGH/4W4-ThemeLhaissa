@@ -1,8 +1,8 @@
 	<?php get_header(); ?>
 
-	<div id="accueil" class="global">
+	<div id="titreVoyages" class="global">
 		<section>
-			<h2>Accueil</h2>
+			<h2>Accueil></h2>
 						<div class="voyages">
 
 				<?php

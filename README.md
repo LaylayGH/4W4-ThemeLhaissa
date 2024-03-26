@@ -6,6 +6,8 @@ Auteure : Lhaïssa Jérôme
 
 Mon lien vers la page : À venir
 
+Mon TP sera sur l'agence de voyage : Voyage.inc, compagnie aérotechnique qui propose des vols internationaux et domestiques.
+
 - Minimum de 20 commits étalés sur toute la durée du TP
 - Une branche tp1
 - Déploiement de votre site sur « WHC »

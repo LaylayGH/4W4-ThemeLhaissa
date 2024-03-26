@@ -1,17 +1,7 @@
 	<?php get_header(); ?>
 
-	<div id="entete" class="global">
-		<header>
-			<img src="http://localhost/4w4-lhaissa/wp-content/uploads/2024/03/club-de-voyage.png" width="40%" height="20%" />
-			<div id="TextesEntete">
-            <h1><?php echo get_bloginfo("name") ?></h1>
-            <h3><?php echo get_bloginfo("description") ?></h3>
-			</div>
-		</header>
-	</div>
-	<div id="accueil" class="global">
+	<div id="accueil" class="global  bck-orange-200">
 		<section>
-			<h2>Accueil</h2>
 						<div class="voyages">
 
 				<?php
@@ -36,7 +26,7 @@
 			<blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <small>Magnam magni dignissimos recusandae sequi libero quasi quos.</small> Deserunt pariatur provident neque necessitatibus amet accusamus nemo explicabo et ut eius molestiae ipsam ex perferendis, vel, blanditiis tempora corporis, praesentium consectetur.</blockquote>
 		</section>
 			<?php get_template_part("gabarits/vague") ?>
-	</div>
+
 	<div id="galerie" class="global diagonal">
 		<section>
 			<h3>Galerie</h3>
