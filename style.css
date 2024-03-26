@@ -106,7 +106,6 @@ body small {
 }
 
 #entete {
-  background-color: var(--couleur-arriere-entete);
   position: relative;
 }
 
@@ -188,6 +187,7 @@ body {
   --couleur-footer: hsl(var(--u1), 40%, 49%);
 }
 
+/* Création de classe de couleur */
 .clr-bleu-100 {
   color: rgb(229, 228, 255);
 }
@@ -316,6 +316,27 @@ body {
   background-color: rgb(201, 189, 102);
 }
 
+/* mixin pour agencer des couleurs */
+.clr-agencement-bleu {
+  color: rgb(229, 228, 255);
+  background-image: linear-gradient(90deg, rgb(68, 61, 255), rgb(179, 176, 255));
+}
+
+.clr-agencement-mauve {
+  color: rgb(40, 6, 98);
+  background-color: rgb(155, 122, 214);
+}
+
+.clr-agencement-orange {
+  color: rgb(133, 43, 0);
+  background-color: rgb(255, 140, 85);
+}
+
+.clr-agencement-beige {
+  color: rgb(201, 189, 102);
+  background-color: rgb(255, 253, 239);
+}
+
 /* =================================
    Effets
 ================================= */
@@ -398,7 +419,6 @@ input[type=checkbox] {
 }
 
 .liensSections {
-  background-color: var(--couleur-arriere-accueil);
   display: flex;
   height: 2rem;
   font-size: 1.5em;
@@ -409,7 +429,6 @@ input[type=checkbox] {
 }
 
 .liensSections a {
-  color: var(--couleur-tertiaire);
   text-decoration: none;
   font-weight: bolder;
 }
