@@ -22,7 +22,8 @@
 		</label>
 		<?php wp_nav_menu(array("container" => "nav")); ?>
 		<div class="liensSections bck-orange-200">
-			<a href="#accueil"><span class="material-symbols-outlined">home</span></a>
+			<a href="#entete"><span class="material-symbols-outlined">home</span></a>
+			<a href="#accueil"><span class="material-symbols-outlined">star</span></a>
 			<a href="#evenement"><span class="material-symbols-outlined">mist</span></a>
 			<a href="#galerie"><span class="material-symbols-outlined">panorama</span></a>
 			<a href="#footer"><span class="material-symbols-outlined">pending</span></a>

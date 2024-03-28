@@ -2,7 +2,7 @@
 
 	<div id="accueil" class="global  bck-orange-200 clr-beige-200">
 		<section>
-			<h2>Nos voyages à découverte</h2>
+			<h2>Nos voyages à découvrir</h2>
 						<div class="voyages">
 
 				<?php
@@ -23,8 +23,9 @@
 	</div>
 	<div id="evenement" class="global bck-beige-300 clr-bleu-300">
 		<section>
-			<h2>Événement </h2>
-			<blockquote>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <small>Magnam magni dignissimos recusandae sequi libero quasi quos.</small> Deserunt pariatur provident neque necessitatibus amet accusamus nemo explicabo et ut eius molestiae ipsam ex perferendis, vel, blanditiis tempora corporis, praesentium consectetur.</blockquote>
+			<h2>Ce que nous offrons...</h2>
+			<blockquote>
+Découvrez le monde avec Voyage.inc avec nos <small>voyages en groupe, voyages en petit comité, voyages en solo</small>. Chaque voyage est une promesse d'expériences uniques, conçues pour répondre à toutes vos envies d'évasion. Nos destinations soigneusement sélectionnées promettent émerveillement et découvertes à chaque tournant.</blockquote>
 		</section>
 			<?php get_template_part("gabarits/vague") ?>
 			</div>
