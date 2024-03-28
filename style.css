@@ -20,6 +20,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -104,7 +108,7 @@ body small {
 }
 
 #entete #TextesEntete {
-  width: 60%;
+  width: 55%;
   font-size: clamp(0.7rem, 0.327rem + 2.665vw, 2.75rem);
 }
 
@@ -144,6 +148,10 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   background-color: var(--couleur-tertiaire);
   color: var(--couleur-accueil);
+}
+
+#footer h4 {
+  color: var(--clr-mauve-fonce);
 }
 
 :root {
@@ -469,6 +477,16 @@ body {
   text-decoration: none;
   padding: 1rem;
   border-radius: 2rem;
+}
+
+.menu-item {
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+  text-decoration: underline wavy var(--clr-orange-moyen) 0.1rem;
 }
 
 .menuPrincipal label {
