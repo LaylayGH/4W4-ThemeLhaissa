@@ -584,24 +584,32 @@ input[type=checkbox] {
   padding-bottom: 0.5rem;
 }
 
-.carte ul.post-categories::before {
-  position: relative;
-  content: "--------------";
-  width: 4rem;
-}
-
 .carte ul.post-categories {
+  text-align: start;
   list-style-type: none;
   line-height: 1.3rem;
 }
 
 .carte ul.post-categories li > a {
   font-size: 1rem;
-  text-decoration: wavy;
+  text-decoration: none;
   color: var(--clr-orange-fonce);
+}
+
+.carte ul.post-categories li > a::before {
+  content: " ➞ ";
+  left: 0.5rem;
 }
 
 .carte p {
   text-align: justify;
   font-size: 0.5em;
+}
+
+.carte p::after {
+  position: relative;
+  display: block;
+  font-size: 1.5em;
+  content: "-----------------";
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
