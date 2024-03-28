@@ -2,7 +2,7 @@
 
 	<div id="accueil" class="global  bck-orange-200 clr-beige-200">
 		<section>
-			<h2>Nos voyages de découverte</h2>
+			<h2>Nos voyages à découverte</h2>
 						<div class="voyages">
 
 				<?php
